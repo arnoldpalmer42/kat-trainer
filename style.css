@@ -1,0 +1,227 @@
+/*************************
+* dom section
+*************************/
+* {
+    box-sizing: border-box;
+  }
+  body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+    font-family: 'Quicksand', sans-serif;
+  }
+  /*************************
+  * flexbox setup
+  *************************/
+  
+  header,
+  footer {
+    background: whitesmoke;
+    height: 7vh;
+    text-align: center;
+  }
+  .content {
+    min-height: 80vh;
+  }
+  .header-nav {
+    padding: 10px;
+    color: black;
+  }
+  a.navbar-link {
+    padding: 0 30px 5px 30px;
+  }
+  .navbar-link:hover{
+    pointer: cursor;
+    color: lightblue;
+    font-size: 15px;
+  }
+  .header-nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  /*************************
+  * main banner
+  *************************/
+
+ .hero-banner {
+   height: 500px;
+   width: 100%;
+   text-align: center;
+   border: 1px solid black;
+   position: relative;
+   border-bottom: none;
+ }
+ .hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://images.pexels.com/photos/258045/pexels-photo-258045.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+  /*************************
+  * testimonials
+  *************************/
+ .testimonial-card {
+   border: 1px solid black;
+   height: 350px;
+   flex-basis: 23%;
+   text-align: center;
+   border-radius: 20px;
+   padding: 10px;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+   overflow: hidden;
+ }
+ .testimonial-header h1 {
+   text-align: center;
+   margin: 0 auto;
+ }
+ .card-thumbnail {
+   height: 40%;
+   box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+ }
+  
+  /*************************
+  * button
+  *************************/
+.btn {
+  outline: none;
+  border: none;
+  cursor: pointer;
+  display: block;
+  position: relative;
+  background-color: #7AA08F;
+  font-size: 14px;
+  font-weight: 300px;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 10px 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+  box-shadow: 0 6px #789E8D;
+}
+.btn:hover {
+  box-shadow: 0 4px #789E8D;
+  top: 2px;
+
+}
+.btn:active {
+  box-shadow: 0 0 #789E8D;
+  top: 6px;
+}
+  /*************************
+  * panel
+  *************************/
+
+.panel, .panel-last {
+  height: 360px;
+  width: 100%;
+  text-align: center;
+  border: 1px solid black;
+  position: relative;
+  border-bottom: none;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  border-radius: 5px;
+  justify-content: flex-start;
+}
+.panel-last {
+  border: 1px solid black;
+}
+.panel-card{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  flex-wrap: wrap;
+  overflow: auto;
+  margin: auto;
+}
+
+.panel-image {
+  flex: 1;
+  padding-bottom: 20px;
+}
+.panel-image-alt {
+  order: 2;
+}
+.panel h1, .panel-last h1 {
+  margin: 0 auto;
+}
+.panel-image img {
+  width: 400px;
+  height: auto;
+  opacity: .7;
+}
+.panel-text {
+  flex: 2;
+}
+
+  /*************************
+  * media queries
+  *************************/
+
+  @media(min-width:576px) {
+    .testimonials 
+    {
+      display: flex;
+      flex-direction: row;
+      height: 400px;
+      align-items: center;
+      justify-content: space-around;
+      border-bottom: none; 
+      padding: 10px 0 10px 0;
+    }
+    .panel, .panel-last {
+      line-height: 30px;
+    }
+    .panel-text {
+      margin: 0 20px 0 20px;
+    }
+  .panel h1, .panel-last h1 {
+    padding-top: 20px;
+    }
+    .testimonial-header h1 {
+      padding-top: 20px;
+    }
+  }
+
+  /*************************
+  * mobile media queries 
+  *************************/
+
+
+  @media(max-width:576px) {
+    .testimonial-header h1 {
+      margin: 20px;
+      font-size: 28px;
+    }
+  }
+  @media(max-width:576px) {
+      .panel, .panel-last {
+        justify-content: center;
+        height: 450px;
+      }
+      .panel-image img {
+        width: 300px;
+      }
+      .testimonial-card {
+        box-shadow: none;
+        width: 300px;
+        margin: 0 auto;
+      }
+  }
